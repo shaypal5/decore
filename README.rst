@@ -44,6 +44,7 @@ You can think about it like a ``functools.lru_cache(maxsize=1)`` for functions w
 
   @lazy_property
   def paramless_big_calc():
+    """I take a lot of time!"""
     sub_res = [big_func(const) for const in array_of_constants]
     return sum(sub_res)
 
@@ -51,7 +52,7 @@ You can think about it like a ``functools.lru_cache(maxsize=1)`` for functions w
 threadsafe_generator
 --------------------
 
-The ``threadsafe_generator`` decorator makes iterables - both generators and iterators - threadsafe. This means multiple threads can be given references to the decorated iterable and it is guarenteed that each item will be yielded (or returned) to only a single thread.
+The ``threadsafe_generator`` decorator makes generators threadsafe. This means multiple threads can be given references to the decorated generator and it is guarenteed that each item in the stream will be yielded (i.e. returned) to only a single thread.
 
 .. code-block:: python
 
@@ -59,10 +60,12 @@ The ``threadsafe_generator`` decorator makes iterables - both generators and ite
 
   @threadsafe_generator
   def user_documents(day):
+    """I return an iterable
     client = get_mongodb_client(some_params)
     dt_obj = translate_day_to_dt(day)
     user_document_cursor = client.some_mongodb_query(dt_obj, some_const)
-    return user_document_cursor
+    while True:
+      yield user_document_cursor.__next__()
 
 
 Contributing
