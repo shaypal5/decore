@@ -87,7 +87,7 @@ Install in development mode with test dependencies:
 
 .. code-block:: bash
 
-  cd pdpipe
+  cd decore
   pip install -e ".[test]"
 
 
