@@ -18,6 +18,16 @@ A small pure-python package for utility decorators.
 .. section-numbering::
 
 
+Installation
+============
+
+Install ``decore`` with:
+
+.. code-block:: bash
+
+  pip install decore
+
+
 Decorators
 ==========
 
@@ -55,14 +65,46 @@ The ``threadsafe_generator`` decorator makes iterables - both generators and ite
     return user_document_cursor
 
 
-Installation
+Contributing
 ============
 
-Install ``decore`` with:
+Package author and current maintainer is Shay Palachy (shay.palachy@gmail.com); You are more than welcome to approach him for help. Contributions are very welcomed.
+
+Installing for development
+--------------------------
+
+Clone:
 
 .. code-block:: bash
 
-  pip install decore
+  git clone git@github.com:shaypal5/decore.git
+
+
+Install in development mode with test dependencies:
+
+.. code-block:: bash
+
+  cd pdpipe
+  pip install -e ".[test]"
+
+
+Running the tests
+-----------------
+
+To run the tests, use:
+
+.. code-block:: bash
+
+  python -m pytest --cov=decore
+
+
+Adding documentation
+--------------------
+
+This project is documented using the `numpy docstring conventions`_, which were chosen as they are perhaps the most widely-spread conventions that are both supported by common tools such as Sphinx and result in human-readable docstrings (in my personal opinion, of course). When documenting code you add to this project, please follow `these conventions`_.
+
+.. _`numpy docstring conventions`: https://github.com/numpy/numpy/blob/master/doc/HOWTO_DOCUMENT.rst.txt
+.. _`these conventions`: https://github.com/numpy/numpy/blob/master/doc/HOWTO_DOCUMENT.rst.txt
 
 
 Credits
