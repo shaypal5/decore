@@ -5,7 +5,7 @@ import threading
 
 class ThreadSafeIter:
     """Takes an iterator/generator and makes it thread-safe by
-    serializing calls to the `next` method of the given iterator/generator.
+    locking on calls to the `next` method of the given iterator/generator.
     """
 
     def __init__(self, it):
