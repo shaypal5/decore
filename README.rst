@@ -60,10 +60,10 @@ The ``threadsafe_generator`` decorator makes generators threadsafe. This means m
 
   @threadsafe_generator
   def user_documents(day):
-    """I return an iterable
+    """I yield some MongoDB documents!"""
     client = get_mongodb_client(some_params)
     dt_obj = translate_day_to_dt(day)
-    user_document_cursor = client.some_mongodb_query(dt_obj, some_const)
+    user_document_cursor = client.some_mongodb_query(dt_obj, SOME_CONST)
     while True:
       yield user_document_cursor.__next__()
 
