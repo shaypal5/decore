@@ -13,7 +13,7 @@ A small pure-python package for utility decorators.
     sub_res = [big_func(const) for const in array_of_constants]
     return sum(sub_res)
 
-.. contents:
+.. contents::
 
 .. section-numbering::
 
