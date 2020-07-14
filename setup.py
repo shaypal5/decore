@@ -1,8 +1,5 @@
 """Setup for the decore package."""
 
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-
 try:
     from setuptools import setup
 except ImportError:
@@ -16,7 +13,9 @@ with open('README.rst') as f:
     README_RST = f.read()
 
 INSTALL_REQUIRES = []
-TEST_REQUIRES = ['pytest', 'coverage', 'pytest-cov']
+TEST_REQUIRES = [
+    'pytest>=4.6', 'coverage', 'pytest-cov==2.5.1',
+]
 
 
 setup(
