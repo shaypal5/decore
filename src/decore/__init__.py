@@ -5,9 +5,5 @@ from .decore import (
     threadsafe_generator,
     lazy_property
 )
-try:
-    del decore
-except NameError: # pragma: no cover
-    pass
 
 from ._version import *  # noqa: F403

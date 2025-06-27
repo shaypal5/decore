@@ -34,7 +34,7 @@ Decorators
 lazy_property
 -------------
 
-The ``lazy_property`` decorator is meant to decorate functions that compute some constant value or property that you only want to compute once. The first call to the decorated function will run it and save the value (in memory) before returning it; subsequent calls will get this value without trigerring the calculation.
+The ``lazy_property`` decorator is meant to decorate functions that compute some constant value or property that you only want to compute once. The first call to the decorated function will run it and save the value (in memory) before returning it; subsequent calls will get this value without triggering the calculation.
 
 You can think about it like a ``functools.lru_cache(maxsize=1)`` for functions with no parameters.
 
@@ -52,7 +52,7 @@ You can think about it like a ``functools.lru_cache(maxsize=1)`` for functions w
 threadsafe_generator
 --------------------
 
-The ``threadsafe_generator`` decorator makes generators threadsafe. This means multiple threads can be given references to the decorated generator and it is guarenteed that each item in the stream will be yielded (i.e. returned) to only a single thread.
+The ``threadsafe_generator`` decorator makes generators threadsafe. This means multiple threads can be given references to the decorated generator and it is guaranteed that each item in the stream will be yielded (i.e. returned) to only a single thread.
 
 .. code-block:: python
 
