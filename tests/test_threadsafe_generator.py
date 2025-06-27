@@ -15,7 +15,8 @@ def make_me_threadsafe():
 
 def read_items(source, n, target):
     """This function reads and prints n items from the given iterable, also
-    putting them to the given target queue."""
+    putting them to the given target queue.
+    """
     for i in range(0, n):
         item = source.__next__()
         print((i, item))
