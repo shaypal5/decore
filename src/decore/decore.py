@@ -8,7 +8,6 @@ class ThreadSafeIter:
 
     Take an iterator/generator and makes it thread-safe by
     locking on calls to the `next` method of the given iterator/generator.
-
     """
 
     def __init__(self, it):
@@ -27,10 +26,10 @@ class ThreadSafeIter:
 
 
 def threadsafe_generator(generator_func):
-    """A decorator that takes a generator function and makes it thread-safe."""
+    """Make a generator function thread-safe."""
 
     def decoration(*args, **keyword_args):
-        """A thread-safe decoration for a generator function."""
+        """Decorate a generator function, thread-safe."""
         return ThreadSafeIter(generator_func(*args, **keyword_args))
 
     return decoration
@@ -42,7 +41,6 @@ def lazy_property(function):
     This decorator is useful for argument-less functions that behave more like
     a global or static property that should be calculated once, but lazily
     (i.e. only if requested).
-
     """
     cached_val = []
 
