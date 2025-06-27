@@ -3,6 +3,10 @@
 from ._version import *  # noqa: F403
 from .decore import (
     ThreadSafeIter as ThreadSafeIter,
-    threadsafe_generator as threadsafe_generator,
+)
+from .decore import (
     lazy_property as lazy_property,
+)
+from .decore import (
+    threadsafe_generator as threadsafe_generator,
 )
