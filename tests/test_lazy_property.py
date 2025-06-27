@@ -13,7 +13,6 @@ def cache_me():
 
 def test_lazy_property():
     """Basic test of the lazy_property decorator."""
-
     first_res = cache_me()
     sec_res = cache_me()
     assert first_res == sec_res
