@@ -1,4 +1,4 @@
-"""Testing the threadsafe_generator decorator."""
+"""Test the threadsafe_generator decorator."""
 
 from queue import Queue
 from threading import Thread
@@ -14,9 +14,7 @@ def make_me_threadsafe():
 
 
 def read_items(source, n, target):
-    """This function reads and prints n items from the given iterable, also
-    putting them to the given target queue.
-    """
+    """Read and print n items from an iterable, putting them in a queue."""
     for i in range(0, n):
         item = source.__next__()
         print((i, item))
@@ -24,7 +22,7 @@ def read_items(source, n, target):
 
 
 def test_threadsafe_generator():
-    """Testing the threadsafe_generator decorator."""
+    """Test the threadsafe_generator decorator."""
     gen = make_me_threadsafe()
     q1 = Queue(maxsize=10)
     q2 = Queue(maxsize=10)
@@ -41,7 +39,7 @@ def test_threadsafe_generator():
 
 
 def test_threadsafe_generator_as_iterator():
-    """Testing the threadsafe_generator decorator as an iterator."""
+    """Test the threadsafe_generator decorator as an iterator."""
     gen = make_me_threadsafe()
     for i in gen:
         print(i)
