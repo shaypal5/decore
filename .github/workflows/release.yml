@@ -60,7 +60,7 @@ jobs:
         with:
           python-version: "3.x"
       - name: Download dist artifact
-        uses: actions/download-artifact@v6
+        uses: actions/download-artifact@v7
         with:
           name: decore_dist
           path: dist
@@ -82,7 +82,7 @@ jobs:
 
     steps:
       - name: Download dist artifact
-        uses: actions/download-artifact@v6
+        uses: actions/download-artifact@v7
         with:
           name: decore_dist
           path: dist
