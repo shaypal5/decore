@@ -6,8 +6,8 @@ import threading
 class ThreadSafeIter:
     """Make an iterator/generator thread-safe.
 
-    Take an iterator/generator and makes it thread-safe by
-    locking on calls to the `next` method of the given iterator/generator.
+    Take an iterator/generator and makes it thread-safe by locking on calls to
+    the `next` method of the given iterator/generator.
 
     """
 
